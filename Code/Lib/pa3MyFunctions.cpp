@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -12,11 +12,11 @@
 
 =============================================================================*/
 
-#include "ccmpiMyFunctions.h"
+#include "pa3MyFunctions.h"
 #include <iostream>
 #include <omp.h>
 
-namespace ccmpi {
+namespace pa3 {
 
 //-----------------------------------------------------------------------------
 void GetFirstAndLastIndex(const int& numberOfThreads,

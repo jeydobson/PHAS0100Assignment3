@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -14,12 +14,12 @@
 
 #define CATCH_CONFIG_RUNNER  // This tells Catch we provide main.
 #include "catch.hpp"
-#include "ccmpiCatchMain.h"
-#include <ccmpiExceptionMacro.h>
+#include "pa3CatchMain.h"
+#include <pa3ExceptionMacro.h>
 #include <mpi.h>
 
 // Global! Only do this in a private test harness.
-namespace ccmpi
+namespace pa3
 {
 int argc;
 char** argv;
@@ -40,8 +40,8 @@ int main (int argc, char * argv[])
       std::cout << "Argument " << i << "/" << argc << ":" << argv[i] << std::endl;
     }
 
-    ccmpi::argc = argc;
-    ccmpi::argv = argv;
+    pa3::argc = argc;
+    pa3::argv = argv;
 
     Catch::Session session; // There must be exactly once instance
 
@@ -58,9 +58,9 @@ int main (int argc, char * argv[])
     delete [] tmpCommandName;
 
   }
-  catch (ccmpi::Exception& e)
+  catch (pa3::Exception& e)
   {
-    std::cerr << "Caught ccmpi::Exception: " << e.GetDescription() << std::endl;
+    std::cerr << "Caught pa3::Exception: " << e.GetDescription() << std::endl;
   }
   catch (std::exception& e)
   {

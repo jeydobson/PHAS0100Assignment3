@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -12,22 +12,22 @@
 
 =============================================================================*/
 
-#ifndef ccmpiException_h
-#define ccmpiException_h
+#ifndef pa3Exception_h
+#define pa3Exception_h
 
-#include "ccmpiWin32ExportHeader.h"
+#include "pa3Win32ExportHeader.h"
 #include <stdexcept>
 #include <ostream>
 #include <sstream>
 
-namespace ccmpi {
+namespace pa3 {
 
 /**
 * \class Exception
 * \brief Base exception class.
 * \ingroup types
 */
-class CMAKECATCHMPI_WINEXPORT Exception : public std::exception
+class PHAS0100ASSIGNMENT3_WINEXPORT Exception : public std::exception
 {
 public:
 

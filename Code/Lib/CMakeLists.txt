@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+#  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -12,24 +12,24 @@
 #
 #============================================================================*/
 
-set(CMAKECATCHMPI_LIBRARY_NAME ccmpi)
+set(PHAS0100ASSIGNMENT3_LIBRARY_NAME ccmpi)
 
-set(CMAKECATCHMPI_LIBRARY_SRCS
-  ccmpiMyFunctions.cpp
-  ccmpiException.cpp
+set(PHAS0100ASSIGNMENT3_LIBRARY_SRCS
+  pa3MyFunctions.cpp
+  pa3Exception.cpp
 )
 
-set(CMAKECATCHMPI_LIBRARY_HDRS
-  ccmpiExceptionMacro.h
+set(PHAS0100ASSIGNMENT3_LIBRARY_HDRS
+  pa3ExceptionMacro.h
 )
 
-add_library(${CMAKECATCHMPI_LIBRARY_NAME} ${CMAKECATCHMPI_LIBRARY_HDRS} ${CMAKECATCHMPI_LIBRARY_SRCS})
+add_library(${PHAS0100ASSIGNMENT3_LIBRARY_NAME} ${PHAS0100ASSIGNMENT3_LIBRARY_HDRS} ${PHAS0100ASSIGNMENT3_LIBRARY_SRCS})
 
 if(BUILD_SHARED_LIBS)
   if(WIN32)
-    add_definitions(-DCMAKECATCHMPI_WINDOWS_EXPORT)
+    add_definitions(-DPHAS0100ASSIGNMENT3_WINDOWS_EXPORT)
   endif(WIN32)
 endif(BUILD_SHARED_LIBS)
 
-target_link_libraries(${CMAKECATCHMPI_LIBRARY_NAME} PRIVATE ${ALL_THIRD_PARTY_LIBRARIES})
+target_link_libraries(${PHAS0100ASSIGNMENT3_LIBRARY_NAME} PRIVATE ${ALL_THIRD_PARTY_LIBRARIES})
 

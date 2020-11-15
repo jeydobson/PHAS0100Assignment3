@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+#  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -12,7 +12,7 @@
 #
 #============================================================================*/
 
-if(CMAKECATCHMPI_USE_MPI)
+if(PHAS0100ASSIGNMENT3_USE_MPI)
 
   find_package(MPI REQUIRED)
 

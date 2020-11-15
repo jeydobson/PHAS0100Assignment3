@@ -2,7 +2,7 @@
 
 #/*============================================================================
 #
-#  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+#  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -14,30 +14,30 @@
 #
 #============================================================================*/
 
-# Script which changes generic name CMakeCatchMPI, namespace ccmpi etc to a project name of your choice.
+# Script which changes generic name PHAS0100Assignment3, namespace pa3 etc to a project name of your choice.
 # USAGE: Just change the variables prefixed by NEW below to an appropriate name then run the script.
 
 ######################################################
 ##                 EDIT THIS PART                   ##
 ######################################################
 
-NEW_PROJECT_NAME_CAMEL_CASE='CMakeCatchMPI'
-NEW_PROJECT_NAME_LOWER_CASE='cmakecatchMPI'
-NEW_PROJECT_NAME_CAPS='CMAKECATCHMPI'
-NEW_SHORT_DESCRIPTION='A software package to demo MPI with CMake, CTest and Catch.'
-NEW_NAMESPACE='ccmpi'
+NEW_PROJECT_NAME_CAMEL_CASE='PHAS0100Assignment3'
+NEW_PROJECT_NAME_LOWER_CASE='phas0100assignment3'
+NEW_PROJECT_NAME_CAPS='PHAS0100ASSIGNMENT3'
+NEW_SHORT_DESCRIPTION='PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.'
+NEW_NAMESPACE='pa3'
 
 
 ######################################################
 
 # Strings to replace
 OLD_DIR_NAME='CMakeCatchTemplate'
-OLD_PROJECT_NAME_CAMEL_CASE='CMakeCatchMPI'
-OLD_PROJECT_NAME_LOWER_CASE='cmakecatchMPI'
-OLD_PROJECT_NAME_CAPS='CMAKECATCHMPI'
-OLD_DOXYGEN_INTRO='A software package to demo MPI with CMake, CTest and Catch.'
-OLD_SHORT_DESCRIPTION='A software package to demo MPI with CMake, CTest and Catch.'
-OLD_NAMESPACE='mp'
+OLD_PROJECT_NAME_CAMEL_CASE='PHAS0100Assignment3'
+OLD_PROJECT_NAME_LOWER_CASE='phas0100assignment3'
+OLD_PROJECT_NAME_CAPS='PHAS0100ASSIGNMENT3'
+OLD_DOXYGEN_INTRO='PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.'
+OLD_SHORT_DESCRIPTION='PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.'
+OLD_NAMESPACE='pa3'
 
 #### Replacements ###
 move_command="mv"
@@ -81,7 +81,7 @@ find_and_replace_string "${OLD_SHORT_DESCRIPTION}" "${NEW_SHORT_DESCRIPTION}"
 # Change Doxygen intro
 find_and_replace_string "${OLD_DOXYGEN_INTRO}" "${NEW_SHORT_DESCRIPTION}"
 
-# Replace name CMakeCatchMPI, cmakecatchMPI, CMAKECATCHMPI etc.
+# Replace name PHAS0100Assignment3, phas0100assignment3, PHAS0100ASSIGNMENT3 etc.
 find_and_replace_string "$OLD_PROJECT_NAME_CAMEL_CASE" "$NEW_PROJECT_NAME_CAMEL_CASE"
 find_and_replace_string "$OLD_PROJECT_NAME_LOWER_CASE" "$NEW_PROJECT_NAME_LOWER_CASE"
 find_and_replace_string "$OLD_PROJECT_NAME_CAPS" "$NEW_PROJECT_NAME_CAPS"

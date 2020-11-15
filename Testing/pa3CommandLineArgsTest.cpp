@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -13,16 +13,16 @@
 =============================================================================*/
 
 #include "catch.hpp"
-#include "ccmpiCatchMain.h"
+#include "pa3CatchMain.h"
 #include <iostream>
 
 TEST_CASE( "My first test", "[init]" ) {
 
   int expectedNumberOfArgs = 2;
-  if (ccmpi::argc != expectedNumberOfArgs)
+  if (pa3::argc != expectedNumberOfArgs)
   {
     std::cerr << "Usage: mpMyFirstCatchTest fileName.txt" << std::endl;
-    REQUIRE( ccmpi::argc == expectedNumberOfArgs);
+    REQUIRE( pa3::argc == expectedNumberOfArgs);
   }
   REQUIRE(true);
 }

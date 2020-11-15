@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -13,9 +13,9 @@
 =============================================================================*/
 
 #include "catch.hpp"
-#include "ccmpiCatchMain.h"
-#include "ccmpiMyFunctions.h"
-#include "ccmpiExceptionMacro.h"
+#include "pa3CatchMain.h"
+#include "pa3MyFunctions.h"
+#include "pa3ExceptionMacro.h"
 #include <mpi.h>
 #include <memory>
 
@@ -49,7 +49,7 @@ TEST_CASE( "6. MPI Triangle Number Test", "[CW2]" ) {
   // as an exact multiple of the number of processes, again for simplicity.
   if (numberOfElements % size != 0)
   {
-    ccmpiExceptionThrow() << "Number of Elements (" << numberOfElements
+    pa3ExceptionThrow() << "Number of Elements (" << numberOfElements
                           << "), is not divisible by the number of processes (" << size << ")";
 
   }
@@ -58,7 +58,7 @@ TEST_CASE( "6. MPI Triangle Number Test", "[CW2]" ) {
   unsigned long int expectedTotal = (numberOfElements * (numberOfElements+1)) / 2;
 
   std::vector<std::pair<unsigned long int, unsigned long int> > v
-    = ccmpi::GetVectorOfSeriesIndexPairs(size, numberOfElements);
+    = pa3::GetVectorOfSeriesIndexPairs(size, numberOfElements);
 
   unsigned long int* originalArray = nullptr;
   unsigned long int* repopulatedArray = nullptr;

@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+#  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -23,7 +23,7 @@ mark_as_advanced(TCL_TCLSH DART_ROOT)
 enable_testing()
 
 if(BUILD_TESTING)
-  set(BUILDNAME "CMAKECATCHMPI" CACHE STRING "Name of build on the dashboard")
+  set(BUILDNAME "PHAS0100ASSIGNMENT3" CACHE STRING "Name of build on the dashboard")
   mark_as_advanced(BUILDNAME)
   configure_file(CMake/CTestCustom.cmake.in ${CMAKE_BINARY_DIR}/CTestCustom.cmake @ONLY)
   configure_file(CMake/CTestContinuous.cmake.in ${CMAKE_BINARY_DIR}/CTestContinuous.cmake @ONLY)

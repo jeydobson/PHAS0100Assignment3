@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -12,11 +12,11 @@
 
 =============================================================================*/
 
-#ifndef ccmpiExceptionMacro_h
-#define ccmpiExceptionMacro_h
+#ifndef pa3ExceptionMacro_h
+#define pa3ExceptionMacro_h
 
-#include "ccmpiException.h"
+#include "pa3Exception.h"
 
-#define ccmpiExceptionThrow() throw ccmpi::Exception(__FILE__,__LINE__)
+#define pa3ExceptionThrow() throw pa3::Exception(__FILE__,__LINE__)
 
 #endif

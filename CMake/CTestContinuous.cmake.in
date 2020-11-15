@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+#  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -17,7 +17,7 @@ set(CTEST_BINARY_DIRECTORY "@CMAKE_BINARY_DIR@")
 set(CTEST_CMAKE_GENERATOR "@CMAKE_GENERATOR@")
 set(CTEST_BUILD_NAME "@CTEST_BUILD_NAME@")
 set(CTEST_GIT_COMMAND "@GIT_EXECUTABLE@")
-set(CMAKECATCHMPI_BRANCH_NAME "@CMAKECATCHMPI_BRANCH_NAME@")
+set(PHAS0100ASSIGNMENT3_BRANCH_NAME "@PHAS0100ASSIGNMENT3_BRANCH_NAME@")
 
 find_program(HOSTNAME_CMD NAMES hostname)
 exec_program("${HOSTNAME_CMD}" ARGS OUTPUT_VARIABLE HOSTNAME)
@@ -106,7 +106,7 @@ endmacro()
 #
 macro(GetBuildName build_name_var)
 
-  if (CTEST_BUILD_NAME MATCHES "(.*)-${CMAKECATCHMPI_BRANCH_NAME}-${commit_hash}-(Rel|Dbg)")
+  if (CTEST_BUILD_NAME MATCHES "(.*)-${PHAS0100ASSIGNMENT3_BRANCH_NAME}-${commit_hash}-(Rel|Dbg)")
     set(compiler_name ${CMAKE_MATCH_1})
     set(build_type ${CMAKE_MATCH_2})
     set(build_name "${compiler_name}-${commit_hash}-${build_type}")

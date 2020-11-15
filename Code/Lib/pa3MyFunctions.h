@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -12,18 +12,18 @@
 
 =============================================================================*/
 
-#ifndef ccmpiMyFunctions_h
-#define ccmpiMyFunctions_h
+#ifndef pa3MyFunctions_h
+#define pa3MyFunctions_h
 
-#include "ccmpiWin32ExportHeader.h"
+#include "pa3Win32ExportHeader.h"
 #include <vector>
 
 /**
-* \file ccmpiMyFunctions.h
+* \file pa3MyFunctions.h
 * \brief Various Utilities.
 * \ingroup utilities
 */
-namespace ccmpi
+namespace pa3
 {
 
 /**
@@ -77,11 +77,11 @@ unsigned long int SumSeries(const unsigned long int* const values, unsigned long
  *
  * So to evaluate the first 3 terms it's:
  * \code{.cpp}
- * double sum = ccmpi::EvaluateGregoryLeibnizSeries(1, 3);
+ * double sum = pa3::EvaluateGregoryLeibnizSeries(1, 3);
  * \endcode
  * and to evaluate the 1000th to 2000th term it's:
  * \code{.cpp}
- * double sum = ccmpi::EvaluateGregoryLeibnizSeries(1000, 2000);
+ * double sum = pa3::EvaluateGregoryLeibnizSeries(1000, 2000);
  * \endcode
  *
  * So, you can compute Pi/4.0 by spreading your processing over say 5 threads,
@@ -90,14 +90,14 @@ unsigned long int SumSeries(const unsigned long int* const values, unsigned long
  * eg.
  *
  * \code{.cpp}
- * double sum1 = ccmpi::EvaluateGregoryLeibnizSeries(1, 1000000000);
- * double sum2 = ccmpi::EvaluateGregoryLeibnizSeries(1000000001, 2000000000);
- * double sum3 = ccmpi::EvaluateGregoryLeibnizSeries(2000000001, 3000000000);
- * double sum4 = ccmpi::EvaluateGregoryLeibnizSeries(3000000001, 4000000000);
- * double sum5 = ccmpi::EvaluateGregoryLeibnizSeries(4000000001, 5000000000);
+ * double sum1 = pa3::EvaluateGregoryLeibnizSeries(1, 1000000000);
+ * double sum2 = pa3::EvaluateGregoryLeibnizSeries(1000000001, 2000000000);
+ * double sum3 = pa3::EvaluateGregoryLeibnizSeries(2000000001, 3000000000);
+ * double sum4 = pa3::EvaluateGregoryLeibnizSeries(3000000001, 4000000000);
+ * double sum5 = pa3::EvaluateGregoryLeibnizSeries(4000000001, 5000000000);
  * \endcode
  */
-CMAKECATCHMPI_WINEXPORT double EvaluateGregoryLeibnizSeries(unsigned long int startingTermNumber,
+PHAS0100ASSIGNMENT3_WINEXPORT double EvaluateGregoryLeibnizSeries(unsigned long int startingTermNumber,
                                                             unsigned long int finishingTermNumber
                                                            );
 
@@ -106,7 +106,7 @@ CMAKECATCHMPI_WINEXPORT double EvaluateGregoryLeibnizSeries(unsigned long int st
  *
  * \brief Computes Pi, using the Gregory Leibniz Series for the specified numberOfElements
  */
-CMAKECATCHMPI_WINEXPORT double EvaluatePiUsingOpenMP(unsigned long int numberOfElements);
+PHAS0100ASSIGNMENT3_WINEXPORT double EvaluatePiUsingOpenMP(unsigned long int numberOfElements);
 
 } // end namespace
 

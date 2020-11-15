@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  CMAKECATCHMPI: A software package to demo MPI with CMake, CTest and Catch.
+  PHAS0100ASSIGNMENT3: PHAS0100 Assignment 3 package to demo MPI with CMake, CTest and Catch.
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -12,23 +12,23 @@
 
 =============================================================================*/
 
-#ifndef ccmpiWin32ExportHeader_h
-#define ccmpiWin32ExportHeader_h
+#ifndef pa3Win32ExportHeader_h
+#define pa3Win32ExportHeader_h
 
 /**
-* \file ccmpiWin32ExportHeader.h
+* \file pa3Win32ExportHeader.h
 * \brief Header to sort Windows dllexport/dllimport.
 */
 
-#if (defined(_WIN32) || defined(WIN32)) && !defined(CMAKECATCHMPI_STATIC)
-  #ifdef CMAKECATCHMPI_WINDOWS_EXPORT
-    #define CMAKECATCHMPI_WINEXPORT __declspec(dllexport)
+#if (defined(_WIN32) || defined(WIN32)) && !defined(PHAS0100ASSIGNMENT3_STATIC)
+  #ifdef PHAS0100ASSIGNMENT3_WINDOWS_EXPORT
+    #define PHAS0100ASSIGNMENT3_WINEXPORT __declspec(dllexport)
   #else
-    #define CMAKECATCHMPI_WINEXPORT __declspec(dllimport)
-  #endif  /* CMAKECATCHMPI_WINEXPORT */
+    #define PHAS0100ASSIGNMENT3_WINEXPORT __declspec(dllimport)
+  #endif  /* PHAS0100ASSIGNMENT3_WINEXPORT */
 #else
 /* linux/mac needs nothing */
-  #define CMAKECATCHMPI_WINEXPORT
+  #define PHAS0100ASSIGNMENT3_WINEXPORT
 #endif
 
 #endif
